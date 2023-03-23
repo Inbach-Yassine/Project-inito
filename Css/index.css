@@ -1,0 +1,95 @@
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --black: #112d35;
+  --white: #ffffff;
+  --aquamarine: #1f94aa;
+  --grey: #c4c4c4;
+}
+*::selection {
+  color: var(--white);
+  background: var(--black);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1em 3em;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.05);
+}
+.navbar > img {
+  width: 80px;
+  object-fit: cover;
+  margin-right: auto;
+}
+.navbar nav {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+.navbar nav li > a {
+  position: relative;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: var(--black);
+}
+.navbar nav li > a:valid {
+  color: red;
+}
+.navbar nav li > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  background-color: var(--aquamarine);
+  width: 0;
+  height: 3px;
+  bottom: -10px;
+  transition: 0.3s;
+}
+.navbar nav li > a:hover {
+  color: var(--aquamarine);
+}
+.navbar nav li > a:hover::after {
+  width: 100%;
+}
+button {
+  padding: 8px 20px;
+  color: var(--white);
+  background: var(--aquamarine);
+  font-size: 13px;
+  border-radius: 15px;
+}
+#toggele {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#toggele::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  transform: translateY(-10px);
+  box-shadow: 0 10px var(--aquamarine);
+  background: var(--aquamarine);
+}
+
+#toggele::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  transform: translateY(10px);
+  background: var(--aquamarine);
+}
