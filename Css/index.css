@@ -68,6 +68,7 @@ button {
   background: var(--aquamarine);
   font-size: 13px;
   border-radius: 15px;
+  cursor: pointer;
 }
 #toggele {
   display: none;
@@ -92,4 +93,44 @@ button {
   height: 4px;
   transform: translateY(10px);
   background: var(--aquamarine);
+}
+.container-track {
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 3em;
+}
+.container-track .track-your-fertility h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 42px;
+  color: var(--black);
+  padding-bottom: 30px;
+}
+.container-track .track-your-fertility h1 span {
+  border-bottom: 7px solid var(--aquamarine);
+}
+.container-track .track-your-fertility p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #3f555d;
+  padding-bottom: 25px;
+}
+.container-track .image {
+  margin-left: auto;
+}
+.container-track .image .svg {
+  position: absolute;
+  top: 10px;
+  left: 620px;
+}
+.container-track .image .svg svg {
+  width: 640px;
+}
+.container-track .image img {
+  width: 600px;
+  height: 500px;
+}
+.container-track .image .img {
+  position: relative;
 }
