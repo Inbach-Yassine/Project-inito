@@ -66,9 +66,13 @@ button {
   padding: 8px 20px;
   color: var(--white);
   background: var(--aquamarine);
-  font-size: 13px;
+  font-size: 15px;
   border-radius: 15px;
   cursor: pointer;
+}
+button:hover {
+  background: #d0cdef;
+  color: var(--black);
 }
 #toggele {
   display: none;
@@ -106,8 +110,9 @@ button {
   color: var(--black);
   padding-bottom: 30px;
 }
-.container-track .track-your-fertility h1 span {
-  border-bottom: 7px solid var(--aquamarine);
+.container-track .track-your-fertility h1 span,
+.seen .groups-content h2 span {
+  border-bottom: 5px solid var(--aquamarine);
 }
 .container-track .track-your-fertility p {
   font-size: 14px;
@@ -134,4 +139,50 @@ button {
 }
 .container-track .image .img {
   position: relative;
+}
+.seen {
+  padding: 2em 3em 3em 3em;
+}
+.seen > p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--grey);
+}
+.seen .groups-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2em 0;
+}
+.seen .groups-logo img {
+  width: 150px;
+  height: 30px;
+}
+.seen .groups-content {
+  text-align: center;
+}
+.seen .groups-content > img {
+  position: relative;
+  top: 13px;
+  left: 330px;
+  width: 30px;
+}
+.seen .groups-content:nth-of-type(3) > img {
+  position: relative;
+  top: 13px;
+  left: 230px;
+}
+.seen .groups-content h2 {
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  color: var(--black);
+  padding-bottom: 10px;
+}
+.seen .groups-content p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 23px;
+  color: #3f555d;
 }
