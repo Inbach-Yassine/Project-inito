@@ -1,24 +1,29 @@
 @import "./reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
+
 :root {
   --black: #112d35;
   --white: #ffffff;
   --aquamarine: #1f94aa;
   --grey: #c4c4c4;
 }
+
 *::selection {
   color: var(--white);
   background: var(--black);
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
   font-family: "Montserrat", sans-serif;
 }
+
 .navbar {
   display: flex;
   align-items: center;
@@ -26,16 +31,19 @@ body {
   padding: 1em 3em;
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.05);
 }
+
 .navbar > img {
   width: 80px;
   object-fit: cover;
   margin-right: auto;
 }
+
 .navbar nav {
   display: flex;
   align-items: center;
   column-gap: 20px;
 }
+
 .navbar nav li > a {
   position: relative;
   font-size: 15px;
@@ -43,9 +51,11 @@ body {
   letter-spacing: 0.5px;
   color: var(--black);
 }
+
 .navbar nav li > a:valid {
   color: red;
 }
+
 .navbar nav li > a::after {
   content: "";
   position: absolute;
@@ -56,12 +66,15 @@ body {
   bottom: -10px;
   transition: 0.3s;
 }
+
 .navbar nav li > a:hover {
   color: var(--aquamarine);
 }
+
 .navbar nav li > a:hover::after {
   width: 100%;
 }
+
 button {
   padding: 8px 20px;
   color: var(--white);
@@ -70,10 +83,12 @@ button {
   border-radius: 15px;
   cursor: pointer;
 }
+
 button:hover {
   background: #d0cdef;
   color: var(--black);
 }
+
 #toggele {
   display: none;
   align-items: center;
@@ -98,11 +113,13 @@ button:hover {
   transform: translateY(10px);
   background: var(--aquamarine);
 }
+
 .container-track {
   display: flex;
   align-items: center;
   padding: 0 0 0 3em;
 }
+
 .container-track .track-your-fertility h1 {
   font-size: 40px;
   font-weight: 700;
@@ -110,10 +127,14 @@ button:hover {
   color: var(--black);
   padding-bottom: 30px;
 }
+
 .container-track .track-your-fertility h1 span,
-.seen .groups-content h2 span {
+.seen .groups-content h2 span,
+.container-groups .box .your-ovulation h2 span,
+.container-groups .box .again-with-inito h2 span {
   border-bottom: 5px solid var(--aquamarine);
 }
+
 .container-track .track-your-fertility p {
   font-size: 14px;
   font-weight: 500;
@@ -121,68 +142,137 @@ button:hover {
   color: #3f555d;
   padding-bottom: 25px;
 }
+
 .container-track .image {
   margin-left: auto;
 }
+
 .container-track .image .svg {
   position: absolute;
   top: 50px;
   left: 620px;
 }
+
 .container-track .image .svg svg {
   width: 640px;
   height: 640px;
 }
+
 .container-track .image img {
   width: 600px;
   height: 500px;
 }
+
 .container-track .image .img {
   position: relative;
 }
+
 .seen {
   padding: 2em 3em 3em 3em;
 }
+
 .seen > p {
   text-align: center;
   font-size: 16px;
   font-weight: 700;
   color: var(--grey);
 }
+
 .seen .groups-logo {
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 2em 0;
 }
+
 .seen .groups-logo img {
   width: 150px;
   height: 30px;
 }
+
 .seen .groups-content {
   text-align: center;
 }
+
 .seen .groups-content > img {
   position: relative;
   top: 13px;
   left: 330px;
   width: 30px;
 }
+
 .seen .groups-content:nth-of-type(3) > img {
   position: relative;
   top: 13px;
   left: 230px;
 }
-.seen .groups-content h2 {
+
+.seen .groups-content h2,
+.container-groups .box .your-ovulation h2,
+.container-groups .box .again-with-inito h2 {
   font-size: 25px;
   font-weight: 700;
   letter-spacing: 0.07em;
   color: var(--black);
-  padding-bottom: 10px;
+  padding-bottom: 16px;
 }
-.seen .groups-content p {
+
+.seen .groups-content p,
+.container-groups .box .your-ovulation > p,
+.container-groups .box .again-with-inito p {
   font-size: 15px;
   font-weight: 500;
   line-height: 23px;
   color: #3f555d;
+}
+
+.container-groups {
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  margin: 0 4em;
+  padding-left: 5em;
+  background: #f7f7fe;
+  border-radius: 13px;
+}
+
+.container-groups .box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-groups .box .your-ovulation > p {
+  padding-bottom: 15px;
+}
+
+.container-groups .box img {
+  width: 400px;
+}
+
+.container-groups .box .again-with-inito .parent {
+  padding-top: 15px;
+}
+
+.container-groups .box .again-with-inito .content-icon {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.container-groups .box .again-with-inito .content-icon .icone {
+  background: var(--aquamarine);
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+}
+
+.container-groups .box .again-with-inito .content-icon:nth-child(2) .icone {
+  background: #aa92e1;
+}
+
+.container-groups .box .again-with-inito .content-icon:nth-child(3) .icone {
+  background: #78b1fa;
+}
+
+.container-groups .box:nth-child(2) {
+  justify-content: space-around;
 }
