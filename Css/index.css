@@ -132,7 +132,10 @@ button:hover {
 .seen .groups-content h2 span,
 .container-groups .box .your-ovulation h2 span,
 .container-groups .box .again-with-inito h2 span,
-.conception-mesureprogesterone .conception h3 span {
+.conception-mesureprogesterone .conception h3 span,
+.parent-smarter .smarter-groups .unique-irregular h2 span,
+.parent-smarter .smarter-groups .tracks-everything h2 span,
+.parent-smarter .smarter-groups .charts-actual-values h2 span {
   border-bottom: 5px solid var(--aquamarine);
 }
 
@@ -196,7 +199,10 @@ button:hover {
   text-align: center;
 }
 
-.seen .groups-content > img {
+.seen .groups-content > img,
+.parent-smarter .smarter-groups .unique-irregular > img:nth-of-type(1),
+.parent-smarter .smarter-groups .tracks-everything > img:nth-of-type(1),
+.parent-smarter .smarter-groups .charts-actual-values > img:nth-of-type(1) {
   position: relative;
   top: 13px;
   left: 330px;
@@ -211,7 +217,11 @@ button:hover {
 
 .seen .groups-content h2,
 .container-groups .box .your-ovulation h2,
-.container-groups .box .again-with-inito h2 {
+.container-groups .box .again-with-inito h2,
+.parent-smarter h2,
+.parent-smarter .smarter-groups .unique-irregular h2,
+.parent-smarter .smarter-groups .tracks-everything h2,
+.parent-smarter .smarter-groups .charts-actual-values h2 {
   font-size: 25px;
   font-weight: 700;
   letter-spacing: 0.07em;
@@ -222,7 +232,10 @@ button:hover {
 .seen .groups-content p,
 .container-groups .box .your-ovulation > p,
 .container-groups .box .again-with-inito p,
-.conception-mesureprogesterone .mesureprogesterone p {
+.conception-mesureprogesterone .mesureprogesterone p,
+.parent-smarter .smarter-groups .unique-irregular p,
+.parent-smarter .smarter-groups .tracks-everything p,
+.parent-smarter .smarter-groups .charts-actual-values p {
   font-size: 15px;
   font-weight: 500;
   line-height: 23px;
@@ -334,4 +347,30 @@ button:hover {
   background: #f7f7fe;
   padding: 25px;
   border-radius: 15px;
+}
+
+.parent-smarter {
+  padding: 2em 4em 0 4em;
+  background: #f4f4fc;
+}
+
+.parent-smarter .smarter-groups {
+  display: flex;
+  justify-content: center;
+  column-gap: 8em;
+  padding-bottom: 15px;
+}
+
+.parent-smarter .smarter-groups > img {
+  width: 400px;
+  object-fit: cover;
+}
+
+.parent-smarter .smarter-groups .unique-irregular p:nth-of-type(1),
+.parent-smarter .smarter-groups .tracks-everything p:nth-of-type(1),
+.parent-smarter .smarter-groups .charts-actual-values p:nth-of-type(1),
+.parent-smarter .smarter-groups .unique-irregular p:nth-of-type(2),
+.parent-smarter .smarter-groups .tracks-everything p:nth-of-type(2),
+.parent-smarter .smarter-groups .charts-actual-values p:nth-of-type(2) {
+  padding-bottom: 5px;
 }
