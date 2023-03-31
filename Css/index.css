@@ -44,7 +44,8 @@ body {
   column-gap: 20px;
 }
 
-.navbar nav li > a {
+.navbar nav li > a,
+footer .container-groups-2 .footer-groups-2 nav a {
   position: relative;
   font-size: 15px;
   font-weight: 400;
@@ -67,7 +68,8 @@ body {
   transition: 0.3s;
 }
 
-.navbar nav li > a:hover {
+.navbar nav li > a:hover,
+footer .container-groups-2 .footer-groups-2 nav a:hover {
   color: var(--aquamarine);
 }
 
@@ -154,7 +156,8 @@ button:hover {
 .container-track .image .svg {
   position: absolute;
   top: 50px;
-  left: 620px;
+  right: 0;
+  left: auto;
 }
 
 .container-track .image .svg svg {
@@ -351,7 +354,6 @@ button:hover {
 
 .parent-smarter {
   padding: 2em 4em 0 4em;
-  background: #f4f4fc;
 }
 
 .parent-smarter .smarter-groups {
@@ -373,4 +375,65 @@ button:hover {
 .parent-smarter .smarter-groups .tracks-everything p:nth-of-type(2),
 .parent-smarter .smarter-groups .charts-actual-values p:nth-of-type(2) {
   padding-bottom: 5px;
+}
+
+footer {
+  margin-top: 3em;
+  padding: 2em 4em 0 4em;
+  background: var(--black);
+}
+
+footer .container-groups-1 {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 2em;
+}
+
+footer .container-groups-1,
+footer .container-groups-1 .footer-groups-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 2em;
+}
+
+footer .container-groups-1 .footer-groups-1 .groups-1 .box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 10px;
+}
+
+footer .container-groups-1 .footer-groups-1 .groups-1 .box > img {
+  width: 30px;
+}
+
+footer .container-groups-1 .footer-groups-1 .groups-1 .box p {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--white);
+}
+
+footer .container-groups-2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 0;
+}
+
+footer .container-groups-2 .footer-groups-2 {
+  display: flex;
+  column-gap: 6em;
+}
+
+footer .container-groups-2 .footer-groups-2 h4 {
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 15px;
+  color: var(--aquamarine);
+}
+
+footer .container-groups-2 .footer-groups-2 nav a {
+  display: block;
+  line-height: 25px;
+  font-size: 14px;
+  color: var(--white);
 }
